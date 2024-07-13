@@ -33,7 +33,7 @@ if(isset($_POST['blogin'])){
     header("location:form.php");
   }else{
     //jika salah, maka login gagal
-    echo "<script>alert('Login Gagal');</script>";
+    echo "<script>alert('Logi Gagal');</script>";
   }
 }
 
