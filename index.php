@@ -52,7 +52,8 @@ if(isset($_POST['blogin'])){
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: 100vh;    
+        
       }
     </style>
   </head>
