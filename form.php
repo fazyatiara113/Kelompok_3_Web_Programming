@@ -1,4 +1,5 @@
 <?php
+
 //koneksi database
 $host = "localhost";
 $user = "root";
@@ -21,7 +22,7 @@ $datax = mysqli_fetch_array($q);
 if($datax){
   $no_terakhir = substr($datax['kode'], -3);
   $no = $no_terakhir + 1;
-  
+
   if($no > 0 and $no < 10 ){
     $kode = "00".$no;
   }else if($no > 10 and $no < 100 ){
@@ -47,30 +48,29 @@ if(!isset($_SESSION['username'])){
 
 //jika tombol simpan di klik
 if(isset($_POST['bsimpan'])){
-
-    //pengujian apakah data akan diedit atau disimpan baru
-    if(isset($_GET['hal']) == "edit"){
-      //data akan diedit
-      $edit = mysqli_query($mysqli, "UPDATE tbarang SET
-                                            nama = '$_POST[tnama]',
-                                            asal = '$_POST[tasal]',
-                                            nama = '$_POST[tnama]',
-                                            jumlah = '$_POST[tjumlah]',
-                                            satuan = '$_POST[tsatuan]',
-                                            tanggal_diterima = '$_POST[ttanggal_diterima]'
-                                      WHERE id_barang = '$_GET[id]'
-                                    ");
-      //pengujian
-      if($edit){
-        echo "<script>
-                  alert('Edit Data Sukses');
-                  document.location='form.php';
-              </script>";
-      }else{
-        echo "<script>
-                  alert('Edit Data Gagal');
-                  document.location='form.php';
-              </script>";
+  
+//pengujian apakah data akan diedit atau disimpan baru
+if(isset($_GET['hal']) == "edit"){
+//data akan diedit
+$edit = mysqli_query($mysqli, "UPDATE tbarang SET
+                              nama = '$_POST[tnama]',
+                              asal = '$_POST[tasal]',
+                              nama = '$_POST[tnama]',
+                              jumlah = '$_POST[tjumlah]',
+                              satuan = '$_POST[tsatuan]',
+                              tanggal_diterima = '$_POST[ttanggal_diterima]'
+                              WHERE id_barang = '$_GET[id]'");
+  //pengujian
+ if($edit){
+ echo "<script>
+ alert('Edit Data Sukses');
+  document.location='form.php';
+  </script>";
+ }else{
+ echo "<script>
+ alert('Edit Data Gagal');
+ document.location='form.php';
+ </script>";
       }
     }else{
       //data akan disimpan baru
@@ -142,10 +142,7 @@ if(isset($_GET['hal'])){
     }
 }
 
-
 ?>
-
-
 
 <!doctype html>
 <html lang="en">
@@ -157,7 +154,6 @@ if(isset($_GET['hal'])){
   </head>
   <body>
 
- 
 <!-- Awal container-->  
     <div class="container">
 
@@ -285,7 +281,6 @@ if(isset($_GET['hal'])){
             $tampil = mysqli_query($mysqli, $q);
             while($data = mysqli_fetch_array($tampil)) : 
           ?>
-
 
           <tr>
             <td><?=$no++ ?></td>
