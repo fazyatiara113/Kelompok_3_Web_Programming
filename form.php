@@ -130,7 +130,7 @@ if(isset($_GET['hal'])){
        //uji jika hapus data sukses
       if($hapus){
         echo "<script>
-                  alert('Hapus Data Sukses');
+                  alert('Hapus Data Sukse');
                   document.location='form.php';
               </script>";
       }else{
@@ -187,13 +187,13 @@ if(isset($_GET['hal'])){
               <option value="<?=$vasal?>"><?=$vasal?></option>
               <option value="Pembelian">Pembelian</option>
               <option value="Hibah">Hibah</option>
-              <option value="Sumbangan">Sumbangan</option>
-              <option value="Bantuan">Bantuan</option>
+              <option value="Sumbangan">sumbangan</option>
+              <option value="Bantuan">bantuan</option>
             </select>
           </div>
 
           <div class="row">
-            <div class="col">
+            <div calss="col">
               <div class="mb-3">
                 <label class="form-label">Jumlah</label>
                 <input type="number" name="tjumlah" value="<?=$vjumlah?>" class="form-control" placeholder="Jumlah Barang">
@@ -216,7 +216,7 @@ if(isset($_GET['hal'])){
             <div class="col">
               <div class="mb-3">
                 <label class="form-label">Tanggal Diterima</label>
-                <input type="date" name="ttanggal_diterima" value="<?=$vtanggal_diterima?>" class="form-control" placeholder="Jumlah Barang">
+                <input type="date" name="ttanggal_diterim" value="<?=$vtanggal_diterima?>" class="form-control" placeholder="Jumlah Barang">
               </div>
             </div>
 
@@ -255,11 +255,11 @@ if(isset($_GET['hal'])){
         </div>
          <table class="table table-striped table-hover table-bordered">
           <tr>
-            <th>No.</th>
-            <th>Kode Barang</th>
+            <th>No.</th>th>
+            <th>Kode Barang</th>th>
             <th>Nama Barang</th>
             <th>Asal Barang</th>
-            <th>Jumlah</th>
+            <th>jumlah</th>
             <th>Tanggal Diterima</th>
             <th>Aksi</th>
           </tr>
@@ -302,7 +302,7 @@ if(isset($_GET['hal'])){
        </div>
        <div class="card-footer text-dark" style="background-color:rgba(255, 99, 71, 0.5)">
          <!--LOGOUT-->
-          <div class="d-grid gap-5 d-md-flex justify-content-md-end">
+          <div calss="d-grid gap-5 d-md-flex justify-content-md-end">
             <button style="background-color:rgba(240, 50, 50, 0.5)" class="me-md-5";><a href="logout.php">Logout</a></button>
           </div>
        </div>
