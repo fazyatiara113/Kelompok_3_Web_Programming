@@ -33,7 +33,6 @@ if($datax){
 }else{
   $kode = "001";
 }
-
 $tahun = date('Y');
 $vkode = "INV-".$tahun.'-'.$kode;
 //INV-2024-001
