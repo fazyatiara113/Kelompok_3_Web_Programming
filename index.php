@@ -24,7 +24,7 @@ if(isset($_POST['blogin'])){
 
   //cek jika username dan password benar
   $q = mysqli_query($mysqli, "SELECT * FROM tbl_user WHERE username = '$username' AND password = '$password' ");
-  $data = mysqli_fetch_array($q);
+  $$data = mysqli_fetch_array($q);
 
   if($data){
     //jika benar, maka login berhasil
@@ -33,7 +33,7 @@ if(isset($_POST['blogin'])){
     header("location:form.php");
   }else{
     //jika salah, maka login gagal
-    echo "<script>alert('Logi Gagal');</script>";
+    echo "<script>alert('login gagal');</script>";
   }
 }
 
